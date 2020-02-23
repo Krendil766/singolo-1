@@ -1,3 +1,14 @@
+:root {
+  --dark-background: #2d303a;
+  --dark-background-border: #323746;
+  --nav-hover-link: #f06c64;
+  --slider-background: #f06c64;
+  --slider-border: #ea676b;
+  --services-background: #f2f2f2;
+  --services-border: #ffffff;
+  --services-text: #666d89;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -21,9 +32,9 @@ a:link, a:visited {
 
 /* header */
 .header__wrapper{
-  background-color: #2d303a;
+  background-color: var(--dark-background);
   height: 9.5rem;
-  border-bottom: 6px solid #323746;
+  border-bottom: 6px solid var(--dark-background-border);
 }
 
 .header {
@@ -71,7 +82,7 @@ a:link, a:visited {
   letter-spacing: -0.005rem;
 }
  .navigation__link a:hover {
-   color: #f06c64;
+   color: var(--nav-hover-link);
  }
 
 /* slider */
@@ -82,8 +93,8 @@ a:link, a:visited {
   justify-content: space-around;
   align-items: center;
   height: 60rem;
-  background-color: #f06c64;
-  border-bottom: 0.6rem solid #ea676b;
+  background-color: var(--slider-background);
+  border-bottom: 0.6rem solid var(--slider-border);
 }
 
 .slider__btn {
@@ -191,16 +202,16 @@ a:link, a:visited {
     margin: 0;
     font-size: 3rem;
     font-weight: 900;
-    color: #666699;
+    color: var(--services-text);
     letter-spacing: -0.02rem;
 }
 
 /* services */
 .services__wrapper {
   padding: 6rem 4rem 7rem 4rem;
-  background-color: #f1f1f1;
-  border-bottom: 6px solid #ffffff;
-  color: #666699;
+  background-color: var(--services-background);
+  border-bottom: 6px solid var(--services-border);
+  color: var(--services-text);
   text-align: justify;
 }
 
