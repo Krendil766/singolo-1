@@ -81,9 +81,10 @@ a:link, a:visited {
   font-weight: 700;
   letter-spacing: -0.005rem;
 }
- .navigation__link a:hover {
-   color: var(--nav-hover-link);
- }
+
+.navigation__link a:hover {
+  color: var(--nav-hover-link);
+}
 
 /* slider */
 
