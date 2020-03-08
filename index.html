@@ -229,11 +229,11 @@
      non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
     </p>
     
-    <div class="form-content" ction method="POST">
-    <form class="get-quote__form">
-      <input type="text" placeholder="Name (Required)" required>
-      <input type="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-      <input type="text" placeholder="Subject">
+    <div class="form-content">
+    <form class="get-quote__form" method="POST" target="_blank">
+      <input type="text" name="username" placeholder="Name (Required)" required>
+      <input type="email" name="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+      <input type="text" name="subject" placeholder="Subject">
       <textarea name="description" id="project-description" placeholder="Describe your project in detail..."></textarea>
       <button class="submit-btn" type="submit">Send</button>
     </form>

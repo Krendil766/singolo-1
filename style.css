@@ -469,7 +469,7 @@ article:nth-child(3n) > div > h3 {
   border-radius: 0.5rem;
   width: 604px;
   height: 15px;
-  color: #323746;
+  color: #f48c8f;
 }
 
 input:invalid {
@@ -484,7 +484,7 @@ input:invalid {
   width: 604px;
   height: 179px;
   resize: none;
-  color: #323746;
+  color: #f48c8f;
 }
   
 .get-quote__form input::placeholder, textarea::placeholder {
@@ -553,7 +553,7 @@ input:invalid {
 }
 
 .contact-info__item a:hover {
-  color: var(--footer-text);
+  color: #fff;
 }
   
 .contact-info__icon {
