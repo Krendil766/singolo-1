@@ -10,7 +10,7 @@
     --services-border: #ffffff;
     --services-text: #666d89;
     --get-quote-background: #f06c64;
-    --get-qoute-border: #f06c64;
+    --get-qoute-border: #ea676b;
     --form-inputs-background: #d6564f;
     --footer-background: #2d303a;
     --get-quote-text: #f0d8d9;
@@ -232,6 +232,8 @@
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 30px;
+    height: 60px;
+    overflow: hidden;
   }
   
   .layout-3-column {
@@ -361,6 +363,10 @@
     font-size: 1.8rem;
     font-weight: 900;
     letter-spacing: -0.015rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
   }
   
   .employee__about {
@@ -415,16 +421,22 @@
   }
   
   .get-quote__form input {
-    margin-bottom: 1.6rem;
+    margin-bottom: 16px;
     padding: 1.1rem 0 1.2rem 1.5rem;
     background-color: var(--form-inputs-background);
     border-style: none;
     border-radius: 0.5rem;
     width: 604px;
+    height: 15px;
   }
+
+  input:invalid {
+    border-color: #fdd; /* Красный цвет фона */
+  }
+
     
   .get-quote__form textarea {
-    padding: 1.1rem 0 1.2rem 1.5rem;
+    padding: 11px 0 12px 15px;
     background-color: var(--form-inputs-background);
     border-radius: 0.5rem;
     border-style: none;
@@ -437,7 +449,7 @@
     font-family: "Lato", Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 12px;
     color: #f48c8f;
   }
   
@@ -494,6 +506,10 @@
   }
   .contact-info__item a {
     padding-left: 2.3rem;
+  }
+
+  .contact-info__item a:hover {
+      color: var(--footer-text);
   }
   
   .contact-info__icon {
