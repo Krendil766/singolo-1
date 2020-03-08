@@ -39,7 +39,7 @@
   width: 1020px;
   box-sizing: border-box;
   font-family: "Lato", Helvetica, sans-serif;
-  }
+}
   
   /* header */
 .header__wrapper{
@@ -96,6 +96,10 @@
 .navigation__link a:hover {
   color: var(--nav-hover-link);
   }
+
+.navigation__dot {
+  color: #494e62;
+}
   
   /* slider */
   
