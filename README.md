@@ -1,6 +1,6 @@
 # singolo
 ## singolo https://alexeikravchuk.github.io/singolo
 
-## part 1: https://alexeikravchuk.github.io/singolo/singolo1.html
-## part 2: https://alexeikravchuk.github.io/singolo/singolo2.html
-## part 3: https://alexeikravchuk.github.io/singolo/singolo3.html
+## part 1: https://github.com/alexeikravchuk/singolo/tree/part1
+## part 2: https://github.com/alexeikravchuk/singolo/tree/part2
+## part 3: https://github.com/alexeikravchuk/singolo/tree/part3
