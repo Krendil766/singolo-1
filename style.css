@@ -213,6 +213,37 @@
   opacity: 0.5;
   align-self: stretch;
 }
+.slide-2 .phones .phone:nth-child(1) {
+  margin-right: 15px;
+}
+.slide-2 .phones .phone:nth-child(3) {
+  margin-left: 38px;
+}
+
+.phone__btn {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: 1px solid #FAFAFA;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.phone_vertical .phone__btn {
+  left: 37.4%;
+  bottom: 7.8%;
+}
+
+.phone_horizontal .phone__btn {
+  left: 2.3%;
+  bottom: 48.5%;
+}
+
+.slide-2 .phone:nth-child(even) .phone__btn {
+  left: 90px;
+  bottom: 7.8%;
+}
 
 .phone_vertical {
   position: relative;
@@ -234,7 +265,7 @@
 .phone_vertical .phone__screen {
   position: absolute;
   left: 14px;
-  top: 63px;
+  top: 62px;
   height: 333px;
   width: 188px;
   background: url("./assets/images/screen-vertical.png");
