@@ -24,6 +24,8 @@ document.querySelectorAll('.tag').forEach( element => {
     element.addEventListener('click', switchTab);
 });
 
+//project selection
+document.getElementById('projects').addEventListener('click', selectProject);
 
 function selectNavigationLink(event) {
     document.querySelectorAll('.navigation__link').forEach( element => {
@@ -118,5 +120,14 @@ function switchTab(event) {
             var i = Math.floor(Math.random()*(cache.length + 1));
             cache.splice(i, 0, elem);
         }
+    }
+}
+
+function selectProject(event) {
+    if(event.target.parentElement.classList.contains('project')) {
+        this.querySelectorAll('.selected').forEach( element => {
+            element.classList.remove('selected');
+        });
+        event.target.classList.add('selected');
     }
 }

@@ -453,7 +453,12 @@ article:nth-child(3n) > div > h3 {
   height: 618px;
   overflow: hidden;
 }
-  
+
+.project img.selected {
+  box-sizing: border-box;
+  border: 5px solid #F06C64;
+}
+
 .portfolio__image {
   margin: 0.4rem 0 1.4rem;
   height: 18.7rem;
