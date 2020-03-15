@@ -7,7 +7,7 @@ let isEnabled = true;
 document.querySelector('.slider__btn_left').addEventListener('click', () => changeSlide('left'));
 document.querySelector('.slider__btn_right').addEventListener('click', () => changeSlide('right'));
 
-//action by pressing phone button
+//action by pressing phone button (turn on and off the screen)
 document.querySelectorAll('.phone__btn').forEach( element => {
     element.addEventListener('click', () => {
         let screen = element.parentElement.querySelector('.phone__screen');
@@ -26,6 +26,17 @@ document.querySelectorAll('.tag').forEach( element => {
 
 //project selection
 document.getElementById('projects').addEventListener('click', selectProject);
+
+//submit form action
+document.querySelector('.get-quote__form').addEventListener('submit', submitForm);
+document.getElementById('confirm-btn').addEventListener('click', () => {
+    // hide modal
+    document.querySelector('.modal').style.display = 'none';
+    // enable scroll
+    document.body.style.overflow = 'auto';
+    // reset form
+    document.querySelector('.get-quote__form').reset();
+});
 
 function selectNavigationLink(event) {
     document.querySelectorAll('.navigation__link').forEach( element => {
@@ -130,4 +141,20 @@ function selectProject(event) {
         });
         event.target.classList.add('selected');
     }
+}
+
+function submitForm(event) {
+    document.body.style.width = document.body.offsetWidth + 'px';
+    document.body.style.overflow = 'hidden';
+
+    let subject = document.getElementById('form-subject').value;
+    let description = document.getElementById('project-description').value;
+
+    document.querySelector('.modal__text').innerHTML = `Письмо отправлено <br>
+    ${!!subject ? 'Тема: ' + subject : 'Без темы'}<br>
+    ${!!description ? 'Описание: ' + description : 'Без описания'}`;
+    
+    document.querySelector('.modal').style.display = 'flex';
+
+    event.preventDefault();
 }
