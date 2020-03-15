@@ -29,13 +29,9 @@ document.getElementById('projects').addEventListener('click', selectProject);
 
 //submit form action
 document.querySelector('.get-quote__form').addEventListener('submit', submitForm);
-document.getElementById('confirm-btn').addEventListener('click', () => {
-    // hide modal
-    document.querySelector('.modal').style.display = 'none';
-    // enable scroll
-    document.body.style.overflow = 'auto';
-    // reset form
-    document.querySelector('.get-quote__form').reset();
+document.getElementById('confirm-btn').addEventListener('click', hideModal);
+document.querySelector('.modal').addEventListener('click', event => {
+    event.target.classList.contains('modal') && hideModal();
 });
 
 function selectNavigationLink(event) {
@@ -150,11 +146,20 @@ function submitForm(event) {
     let subject = document.getElementById('form-subject').value;
     let description = document.getElementById('project-description').value;
 
-    document.querySelector('.modal__text').innerHTML = `Письмо отправлено <br>
-    ${!!subject ? 'Тема: ' + subject : 'Без темы'}<br>
-    ${!!description ? 'Описание: ' + description : 'Без описания'}`;
+    document.querySelector('.modal__text').innerHTML = `The letter was sent <br>
+    ${!!subject ? 'Subject: ' + subject : 'Without subject'}<br>
+    ${!!description ? 'Description: ' + description : 'Without description'}`;
     
     document.querySelector('.modal').style.display = 'flex';
 
     event.preventDefault();
+}
+
+function hideModal(event) {
+    // hide modal
+    document.querySelector('.modal').style.display = 'none';
+    // enable scroll
+    document.body.style.overflow = 'auto';
+    // reset form
+    document.querySelector('.get-quote__form').reset();
 }
