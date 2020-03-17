@@ -72,10 +72,12 @@ function changeSlide (direction) {
     let moveSlides = setInterval( () => {
         activeSlideX += slideSpeed;
         nextSlideX += slideSpeed;
-         activeSlide.style.left = `${activeSlideX}px`;
-        nextSlide.style.left = `${nextSlideX}px`;;
+        activeSlide.style.left = `${activeSlideX}px`;
+        nextSlide.style.left = `${nextSlideX}px`;
 
-        if (nextSlide.offsetLeft === 0) {
+        if (Math.abs(nextSlide.offsetLeft) < Math.abs(slideSpeed)) {
+            activeSlide.style.left = `${activeSlideX - nextSlide.offsetLeft}px`;
+            nextSlide.style.left = `${nextSlideX - nextSlide.offsetLeft}px`;
             clearInterval(moveSlides);
             isEnabled = true;
         }
