@@ -142,19 +142,31 @@ function selectProject(event) {
 }
 
 function submitForm(event) {
+    event.preventDefault();
+    
     document.body.style.width = document.body.offsetWidth + 'px';
     document.body.style.overflow = 'hidden';
 
     let subject = document.getElementById('form-subject').value;
     let description = document.getElementById('project-description').value;
+    
+    if(checkEmail(document.forms[0].email.value)) {
+        document.forms[0].email.classList.remove('invalid');
+    } else {
+        document.forms[0].email.classList.add('invalid');
+        return;
+    }
 
     document.querySelector('.modal__text').innerHTML = `The letter was sent <br>
     ${!!subject ? 'Subject: ' + subject : 'Without subject'}<br>
     ${!!description ? 'Description: ' + description : 'Without description'}`;
     
     document.querySelector('.modal').style.display = 'flex';
+}
 
-    event.preventDefault();
+function checkEmail(value) {
+    let pattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    return pattern.test(value);
 }
 
 function hideModal(event) {
