@@ -599,18 +599,24 @@ input:invalid {
   font-size: 1.4rem;
   color: #886A30;
   background-color: #FBC65F;
-  border: none;
+  border: 2px solid #dBb65F;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background, border, box-shadow 1s ;
+  transition: box-shadow, border 300ms ;
 }
   
 .submit-btn:hover {
-  background-color: var(--get-quote-border);
-  border: 2px solid var(--form-inputs-background);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  color: #883A30;
+  border: 2px solid #cBa65F;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
-  
+
+.submit-btn:active {
+  border: none;
+  outline: none;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
 .contact-info {
   width: 300px;
 }
@@ -731,6 +737,7 @@ input:invalid {
   width: 300px;
   height: 160px;
   background-color: var(--get-quote-background);
+  box-shadow: 10px 10px 30px black;
   border-radius: 0.5rem;
   z-index: 30;
 }
@@ -748,18 +755,27 @@ input:invalid {
   left: 50%;
   transform: translate(-50%);
   padding: 5px 10px;
-  color: var(--get-quote-text);
-  border: none;
+  color: #886A30;
+  background-color: #FBC65F;
+  border: 2px solid #dBb65F;
   border-radius: 0.5rem;
   cursor: pointer;
-  background-color: var(--form-inputs-background);
-  transition: background, border, box-shadow 1s ;
+  transition: box-shadow, border 300ms ;
 }
+
 .modal__content #confirm-btn:hover {
-  background-color: var(--get-quote-border);
-  border: 1px solid var(--form-inputs-background);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  color: #883A30;
+  border: 2px solid #cBa65F;
+  box-shadow: 0px 3px 7px 3px rgba(0, 0, 0, 0.2);
 }
+
+.modal__content #confirm-btn:active {
+  border: none;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /* tablet-768 */
 @media screen and (max-width: 1020px) {
