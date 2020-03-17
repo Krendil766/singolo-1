@@ -29,7 +29,12 @@
   --mobile-small-width: 320px;
 }
   
-  html, body {
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -147,7 +152,7 @@
   
   background-repeat: no-repeat;
   outline: none;
-  transition: all 500ms;
+  transition: background 500ms;
   z-index: 5;
 }
   
@@ -553,7 +558,7 @@
 }
   
 .get-quote__form {
-  width: 605px;
+  width: 620px;
   color: var(--get-quote-text);
 }
   
@@ -564,12 +569,17 @@
   border-style: none;
   border-radius: 0.5rem;
   width: 100%;
-  height: 15px;
+  height: 38px;
   color: #f48c8f;
 }
 
+input:active {
+  border: 1px solid rgb(190, 168, 241); /* Красный цвет фона */
+}
+
 input:invalid {
-  border-color: #fdd; /* Красный цвет фона */
+  border: 1px solid rgb(243, 38, 38); /* Красный цвет фона */
+  outline: none;
 }
 
 .get-quote__form textarea {
@@ -578,7 +588,7 @@ input:invalid {
   border-radius: 0.5rem;
   border-style: none;
   width: 100%;
-  height: 179px;
+  height: 200px;
   resize: none;
   color: #f48c8f;
 }
