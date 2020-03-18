@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <header class="header" id="home">
+  <header class="header">
     <div class="wrapper header__wrapper">
       <span class="header__hamburger hamburger"><span class="hamburger__line"></span></span>
       <a href="index.html" class="logo">
@@ -18,7 +18,7 @@
       </a>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__link active"><a href="#home">HOME</a></li>
+          <li class="navigation__link"><a href="#home" class="active">HOME</a></li>
           <li class="navigation__dot">&#183;</li>
           <li class="navigation__link"><a href="#services">SERVICES</a></li>
           <li class="navigation__dot">&#183;</li>
@@ -32,7 +32,8 @@
     </div>
   </header>
   
-  <div class="slider">
+  <section class="slider">
+    <a name="home" class="ancor-link"></a>
     <div class="wrapper slider__wrapper">
       <button class="slider__btn slider__btn_left"></button>
       <button class="slider__btn slider__btn_right"></button>
@@ -80,7 +81,7 @@
 
       </div>
     </div>
-  </div>
+  </section>
   
   <section class="services">
     <a name="services" class="ancor-link"></a>
@@ -311,9 +312,7 @@
 
   <div class="modal">
     <div class="modal__content">
-      <p class="modal__text">
-        Письмо отправлено
-      </p>
+      <p class="modal__text"></p>
       <button id="confirm-btn">OK</button>
     </div>
   </div>

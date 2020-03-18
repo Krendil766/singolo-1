@@ -39,6 +39,7 @@ html, body {
   list-style: none;
   border: none;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
   
   a:link, a:visited {
@@ -57,7 +58,7 @@ html, body {
   
 .ancor-link {
   position: relative;
-  top: -60px;
+  top: -40px;
 }
 
   /* header */
@@ -120,7 +121,7 @@ html, body {
   letter-spacing: -0.005rem;
 }
   
-.navigation__link.active {
+.navigation__link a.active {
   color: var(--nav-hover-link);
 }
 

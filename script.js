@@ -1,6 +1,5 @@
-
-//action by clicking on navigation menu
-document.querySelector('.header__navigation').addEventListener('click', selectNavigationLink);
+//change of link activity by scroll
+document.addEventListener('scroll', onScroll);
 
 //slider buttons action
 let isEnabled = true;
@@ -34,17 +33,23 @@ document.querySelector('.modal').addEventListener('click', event => {
     event.target.classList.contains('modal') && hideModal();
 });
 
-function selectNavigationLink(event) {
-    document.querySelectorAll('.navigation__link').forEach( element => {
-        element.classList.remove('active');
+
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('.navigation__link a');
+
+    sections.forEach( el => {
+        if(el.offsetTop - 100 <= curPos && (el.offsetTop + el.offsetHeight - 100) > curPos) {
+            links.forEach( a => {
+                a.classList.remove('active');
+                if(el.firstElementChild.getAttribute('name') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                }
+            })
+        }
     });
-
-    if (event.target.tagName === "A") {
-        event.target.parentElement.classList.add('active');
-        window.scrollBy(0, 95); 
-    }
 }
-
 
 function changeSlide (direction) {
     if(!isEnabled) return;
@@ -143,7 +148,7 @@ function selectProject(event) {
 
 function submitForm(event) {
     event.preventDefault();
-    
+
     document.body.style.width = document.body.offsetWidth + 'px';
     document.body.style.overflow = 'hidden';
 
