@@ -555,7 +555,7 @@ h4 {
   width: 25px;
   height: 20px;
   z-index: 10;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-out;
 }
 .hamburger::before {
   top: 0;
@@ -641,14 +641,14 @@ h4 {
   }
   .header__wrapper .header__navigation {
     position: absolute;
-    display: none;
+    display: block;
     width: 0;
     height: 100vh;
-    left: 0;
+    left: -100vh;
     top: 0;
     background-color: rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: all 0.3s ease-out;
+    transition: left 0.5s ease-out;
   }
   .header__wrapper .header__navigation .navigation {
     flex-direction: column;
@@ -669,7 +669,7 @@ h4 {
     margin-bottom: 28px;
   }
   .header__wrapper .header__navigation.active {
-    display: block;
+    left: 0;
     width: 100vw;
   }
 }
