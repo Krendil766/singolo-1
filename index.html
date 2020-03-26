@@ -11,88 +11,88 @@
 
   <header class="header">
     <div class="wrapper header__wrapper">
-      <span class="header__hamburger hamburger"><span class="hamburger__line"></span></span>
-      <a href="index.html" class="logo">
-      <h1 class="logo__text">SINGOLO</h1>
-      <span class="logo__star">*</span>
-      </a>
-      <nav class="header__navigation">
+      <div class="logo-container">
+        <span class="header__hamburger hamburger"><span class="hamburger__line"></span></span>
+        <a href="index.html" class="logo">
+          <h1 class="logo__text">SINGOLO</h1>
+          <span class="logo__star">*</span>
+        </a>
+        <span></span>
+      </div>
+      <nav class="header__navigation" id="navigation-block">
         <ul class="navigation">
-          <li class="navigation__link"><a href="#home" class="active">HOME</a></li>
-          <li class="navigation__dot">&#183;</li>
-          <li class="navigation__link"><a href="#services">SERVICES</a></li>
-          <li class="navigation__dot">&#183;</li>
-          <li class="navigation__link"><a href="#portfolio">PORTFOLIO</a></li>
-          <li class="navigation__dot">&#183;</li>
-          <li class="navigation__link"><a href="#about">ABOUT</a></li>
-          <li class="navigation__dot">&#183;</li>
-          <li class="navigation__link"><a href="#contact">CONTACT</a></li>
+          <li class="navigation_link"><a href="#home" class="active">HOME</a></li>
+          <li class="navigation_dot">&#183;</li>
+          <li class="navigation_link"><a href="#services">SERVICES</a></li>
+          <li class="navigation_dot">&#183;</li>
+          <li class="navigation_link"><a href="#portfolio">PORTFOLIO</a></li>
+          <li class="navigation_dot">&#183;</li>
+          <li class="navigation_link"><a href="#about">ABOUT</a></li>
+          <li class="navigation_dot">&#183;</li>
+          <li class="navigation_link"><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+
   <section class="slider">
     <a name="home" class="ancor-link"></a>
     <div class="wrapper slider__wrapper">
       <button class="slider__btn slider__btn_left"></button>
-      <button class="slider__btn slider__btn_right"></button>
       <div class="slides">
-
         <!-- SLIDE-1 -->
         <div class="slider__slide active slide-1">
           <div class="phones">
             <div class="phone phone_vertical">
-              <div class="phone__base"></div>
-              <div class="phone__screen"></div>
-              <div class="phone__shadow"></div>
-              <div class="phone__btn"></div>
+              <div class="phone_base"></div>
+              <div class="phone_screen"></div>
+              <div class="phone_shadow"></div>
+              <div class="phone_btn"></div>
             </div>
             <div class="phone phone_horizontal">
-              <div class="phone__base"></div>
-              <div class="phone__screen"></div>
-              <div class="phone__shadow"></div>
-              <div class="phone__btn"></div>
+              <div class="phone_base"></div>
+              <div class="phone_screen"></div>
+              <div class="phone_shadow"></div>
+              <div class="phone_btn"></div>
             </div>
           </div>
         </div>
-
         <!-- SLIDE-2 -->
         <div class="slider__slide slide-2">
           <div class="phones">
             <div class="phone phone_vertical">
-              <div class="phone__base"></div>
-              <div class="phone__screen"></div>
-              <div class="phone__shadow"></div>
+              <div class="phone_base"></div>
+              <div class="phone_screen"></div>
+              <div class="phone_shadow"></div>
             </div>
             <div class="phone phone_vertical">
-              <div class="phone__base"></div>
-              <div class="phone__screen"></div>
-              <div class="phone__shadow"></div>
-              <div class="phone__btn"></div>
+              <div class="phone_base"></div>
+              <div class="phone_screen"></div>
+              <div class="phone_shadow"></div>
+              <div class="phone_btn"></div>
             </div>
             <div class="phone phone_vertical">
-              <div class="phone__base"></div>
-              <div class="phone__screen"></div>
-              <div class="phone__shadow"></div>
+              <div class="phone_base"></div>
+              <div class="phone_screen"></div>
+              <div class="phone_shadow"></div>
             </div>
           </div>
         </div>
-
       </div>
+      <button class="slider__btn slider__btn_right"></button>
     </div>
   </section>
-  
+
   <section class="services">
     <a name="services" class="ancor-link"></a>
     <div class="wrapper services__wrapper">
       <h2 class="section-title">Our Services</h2>
       <p class="services__description description">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
         Duis mollis, non commodo luctus, nisi erat porttitor ligula,
          eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
       </p>
-      <div class="layout-3-column">
+      <div class="layout-3-column service-container">
         <article class="service">
           <img class="service__icon" src="./assets/images/icons/pen.png" alt="pen">
           <div class="service__content">
@@ -150,7 +150,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="portfolio">
     <a name="portfolio" class="ancor-link"></a>
     <div class="wrapper portfolio__wrapper">
@@ -164,7 +164,7 @@
         <span class="tag tag_bordered">Graphic Design</span>
         <span class="tag tag_bordered">Artwork</span>
       </div>
-      <div class="layout-4-column projects" id="projects">
+      <div class="layout-4-column projects-container" id="projects">
         <article class="project">
           <img class="portfolio__image" src="./assets/images/projects/project1.png" alt="pen">
         </article>
@@ -217,7 +217,7 @@
         <div class="employee">
           <img class="employee__photo" src="./assets/images/workers/photo1.png" alt="Adam Jensen">
           <div class="employee__content">
-            <h3 class="employee__name">Adam Jensen</h5>
+            <h3 class="employee__name">Adam Jensen</h3>
             <p class="employee__about">Quisque luctus, quam eget molestie commodo,
                lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
             <div class="employee__socials">
@@ -231,7 +231,7 @@
         <div class="employee">
           <img class="employee__photo" src="./assets/images/workers/photo2.png" alt="Desmond Miles">
           <div class="employee__content">
-            <h3 class="employee__name">Desmond Miles</h5>
+            <h3 class="employee__name">Desmond Miles</h3>
             <p class="employee__about">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
                viverra lacus ut, ultrices velit.</p>
             <div class="employee__socials">
@@ -245,7 +245,7 @@
         <div class="employee">
           <img class="employee__photo" src="./assets/images/workers/photo3.png" alt="Scolara Visari">
           <div class="employee__content">
-            <h3 class="employee__name">Scolara Visari</h5>
+            <h3 class="employee__name">Scolara Visari</h3>
             <p class="employee__about">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
                et consequat felis. Quisque condimentum.</p>
             <div class="employee__socials">
@@ -270,16 +270,16 @@
       </p>
       <div class="form-content">
         <form class="get-quote__form" method="POST" target="_blank">
-          <input type="text" name="username" placeholder="Name (Required)" required>
-          <input type="email" name="email" placeholder="Email (Required)" required>
-          <input type="text" name="subject" id="form-subject" placeholder="Subject">
+          <input type="text" name="username" title="Please enter your name" placeholder="Name (Required)" required>
+          <input type="email" name="email" title="Please enter your email. Example: yourname@gmail.com" placeholder="Email (Required)" required>
+          <input type="text" name="subject" title="Please enter a subject" id="form-subject" placeholder="Subject">
           <textarea name="description" id="project-description" maxlength="875" placeholder="Describe your project in detail..."></textarea>
           <button class="submit-btn" type="submit" id="form-submit-btn">SEND</button>
         </form>
         <div class="contact-info">
           <h3 class="contact-info__title">Contact Information</h3>
           <p class="contact-info__description">
-            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
           </p>
           <ul class="contact-info__list">
             <li class="contact-info__item">
@@ -301,11 +301,12 @@
   </section>
   <section class="footer">
     <div class="wrapper footer__wrapper">
+      <h4>&#169 Copyright 2013</h4>
       <div class="footer__socials">
         <a href="#facebook" class="facebook"><img src="./assets/images/social/facebook.png" alt="facebook"></a>
         <a href="#google" class="google"><img src="./assets/images/social/google.png" alt="google"></a>
         <a href="#twitter" class="twitter"><img src="./assets/images/social/twitter.png" alt="twitter"></a>
-        <a href="#linkedin" class="linkedin"><img src="./assets/images/social/linkedin.png" alt="linkedin"></a>
+        <a href="https://www.linkedin.com/in/alexei-kravchuk-a1b69114a/" class="linkedin"><img src="./assets/images/social/linkedin.png" alt="linkedin"></a>
       </div>
     </div>
   </section>
@@ -318,5 +319,5 @@
   </div>
 
   <script src="script.js"></script>
-  
+
 </body>

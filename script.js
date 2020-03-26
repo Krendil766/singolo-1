@@ -7,9 +7,9 @@ document.querySelector('.slider__btn_left').addEventListener('click', () => chan
 document.querySelector('.slider__btn_right').addEventListener('click', () => changeSlide('right'));
 
 //action by pressing phone button (turn on and off the screen)
-document.querySelectorAll('.phone__btn').forEach( element => {
+document.querySelectorAll('.phone_btn').forEach( element => {
     element.addEventListener('click', () => {
-        let screen = element.parentElement.querySelector('.phone__screen');
+        let screen = element.parentElement.querySelector('.phone_screen');
         if (screen.style.opacity === "0") {
             screen.style.opacity = "1";
         } else {
@@ -33,11 +33,33 @@ document.querySelector('.modal').addEventListener('click', event => {
     event.target.classList.contains('modal') && hideModal();
 });
 
+//opening burger menu
+document.querySelector('.hamburger').addEventListener('click', (e) => {
+  e.currentTarget.classList.toggle('active');
+  document.getElementById('navigation-block').classList.toggle('active');
+  document.querySelector('.logo').classList.toggle('burger-active');
+  if(document.querySelector('.hamburger').classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+});
+
+//close burger menu
+document.addEventListener('click', (e) => {
+  let isBurgerActive = document.querySelector('.hamburger').classList.contains('active');
+  if(isBurgerActive && e.target.tagName === 'A' || e.target.tagName === 'NAV') {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.getElementById('navigation-block').classList.toggle('active');
+    document.querySelector('.logo').classList.toggle('burger-active');
+  }
+}, true);
+
 
 function onScroll(event) {
     const curPos = window.scrollY;
     const sections = document.querySelectorAll('section');
-    const links = document.querySelectorAll('.navigation__link a');
+    const links = document.querySelectorAll('.navigation_link a');
 
     sections.forEach( el => {
         if(el.offsetTop - 100 <= curPos && (el.offsetTop + el.offsetHeight - 100) > curPos) {
@@ -73,7 +95,7 @@ function changeSlide (direction) {
         activeSlideX = activeSlide.offsetLeft;
         nextSlideX = -activeSlide.offsetWidth;
     }
-            
+
     let moveSlides = setInterval( () => {
         activeSlideX += slideSpeed;
         nextSlideX += slideSpeed;
@@ -117,7 +139,7 @@ function switchTab(event) {
     function shuffle(arr){
         var compare = shufleComparator();
         return arr.sort(compare);
-        
+
         function shufleComparator(){
             var cache = [];
             return function(a, b){
@@ -154,7 +176,7 @@ function submitForm(event) {
 
     let subject = document.getElementById('form-subject').value;
     let description = document.getElementById('project-description').value;
-    
+
     if(checkEmail(document.forms[0].email.value)) {
         document.forms[0].email.classList.remove('invalid');
     } else {
@@ -165,7 +187,7 @@ function submitForm(event) {
     document.querySelector('.modal__text').innerHTML = `The letter was sent <br>
     ${!!subject ? 'Subject: ' + subject : 'Without subject'}<br>
     ${!!description ? 'Description: ' + description : 'Without description'}`;
-    
+
     document.querySelector('.modal').style.display = 'flex';
 }
 
@@ -181,4 +203,8 @@ function hideModal(event) {
     document.body.style.overflow = 'auto';
     // reset form
     document.querySelector('.get-quote__form').reset();
+}
+
+if (!window.ontouchstart) {
+    document.querySelectorAll('a').forEach(el => el.classList.add('hover_none'));
 }
