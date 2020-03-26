@@ -719,8 +719,7 @@ h4 {
 
 .footer__socials a {
   margin: 0 0 0 6px;
-  opacity: 0.7;
-  filter: grayscale(0.5) blur(0.5px);
+  opacity: 0.8;
 }
 
 .footer__socials a:hover {
@@ -1294,7 +1293,7 @@ h4 {
 @media (max-width: 767px) {
   .workers .employee {
     width: 100%;
-    max-width: 314px;
+    max-width: 500px;
     margin: 0 auto;
     padding-bottom: 31px;
   }

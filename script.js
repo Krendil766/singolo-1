@@ -41,7 +41,7 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
   if(document.querySelector('.hamburger').classList.contains('active')) {
     document.body.style.overflow = 'hidden';
   } else {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
   }
 });
 
@@ -52,6 +52,7 @@ document.addEventListener('click', (e) => {
     document.querySelector('.hamburger').classList.toggle('active');
     document.getElementById('navigation-block').classList.toggle('active');
     document.querySelector('.logo').classList.toggle('burger-active');
+    document.body.style.overflow = '';
   }
 }, true);
 
@@ -150,7 +151,7 @@ function switchTab(event) {
         }
 
         function putToCache(elem, cache){
-            if(cache.indexOf(elem) != -1){
+            if(cache.indexOf(elem) !== -1){
                 return;
             }
             var i = Math.floor(Math.random()*(cache.length + 1));
