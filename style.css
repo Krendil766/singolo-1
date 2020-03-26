@@ -1093,7 +1093,7 @@ h4 {
 @media (max-width: 767px) {
   .portfolio__wrapper {
     border-width: 0;
-    padding: 42px 30px 34px;
+    padding: 42px 30px 43px;
   }
 }
 
@@ -1156,7 +1156,6 @@ h4 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-height: 618px;
   overflow: hidden;
 }
 .projects-container .project {
@@ -1179,9 +1178,6 @@ h4 {
   border: 5px solid #F06C64;
 }
 @media (max-width: 1019px) {
-  .projects-container {
-    max-height: 794px;
-  }
   .projects-container .project {
     flex: 1 0 30%;
   }
@@ -1194,7 +1190,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .projects-container {
-    max-height: 560px;
+    height: calc((100vw - 73px) * 2 * 128 / 151 + 39px);
   }
   .projects-container .project {
     flex: 1 0 44%;
