@@ -1169,20 +1169,25 @@ h4 {
   flex: 1 0 23%;
   margin: 0 20px 20px 0;
   line-height: 0;
+  box-shadow: inset 0px 0px 0 6px #F06C64;
 }
 .projects-container .project:nth-child(4n) {
   margin-right: 0;
 }
 .projects-container .project .portfolio__image {
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   cursor: pointer;
 }
 .projects-container .project .portfolio__image:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 .projects-container .project .portfolio__image.selected {
-  border: 5px solid #F06C64;
+  position: relative;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  left: 5px;
+  top: 5px;
 }
 @media (max-width: 1019px) {
   .projects-container .project {
