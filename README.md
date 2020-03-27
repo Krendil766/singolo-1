@@ -1,5 +1,13 @@
-## singolo https://alexeikravchuk.github.io/singolo
+# [Singolo](https://alexeikravchuk.github.io/singolo)
 
+___
+
+## Информация для проверяющего:
+[Singolo. DOM выполнено 14.03.2020 (ссылка на коммит)](https://github.com/alexeikravchuk/singolo/tree/55dbb46da284998b9135ef2036fb2e2e9bab2c4b)
+
+Активация экранов телефонов по клику **на кнопку расположенную внизу телефона или с левой стороны для горизонтально расположенного телефона**
+
+-----------------------------------------
 # Homework: Singolo. DOM + Responsive
 **[Макет figma Singolo](https://www.figma.com/file/HfBfQdMpn9X9FMPeocJGis/Singolo)**  
 
