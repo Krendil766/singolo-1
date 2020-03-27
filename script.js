@@ -38,11 +38,7 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
   e.currentTarget.classList.toggle('active');
   document.getElementById('navigation-block').classList.toggle('active');
   document.querySelector('.logo').classList.toggle('burger-active');
-  if(document.querySelector('.hamburger').classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
+  document.body.classList.toggle('blocked');
 });
 
 //close burger menu
@@ -52,7 +48,7 @@ document.addEventListener('click', (e) => {
     document.querySelector('.hamburger').classList.toggle('active');
     document.getElementById('navigation-block').classList.toggle('active');
     document.querySelector('.logo').classList.toggle('burger-active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('blocked');
   }
 }, true);
 
