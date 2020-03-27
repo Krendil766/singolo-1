@@ -1,4 +1,3 @@
-# singolo
 ## singolo https://alexeikravchuk.github.io/singolo
 
 # Homework: Singolo. DOM + Responsive
