@@ -801,17 +801,47 @@ h4 {
   width: 1020px;
   height: 100%;
 }
-@media (max-width: 1019px) {
+@media screen and (max-width: 1019px) {
+  .slides .phones {
+    transform: scale(0.85);
+  }
+}
+@media screen and (max-width: 900px) {
+  .slides .phones {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 800px) {
   .slides .phones {
     transform: scale(0.75);
   }
 }
 @media (max-width: 767px) {
+  .slides {
+    width: 100%;
+  }
+  .slides .phones {
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 690px) {
+  .slides .phones {
+    transform: scale(0.6);
+  }
+}
+@media screen and (max-width: 600px) {
+  .slides .phones {
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .slides .phones {
+    transform: scale(0.4);
+  }
+}
+@media screen and (max-width: 440px) {
   .slides .phones {
     transform: scale(0.3681);
-  }
-  .slides .phones .phone_vertical {
-    margin-right: 70px;
   }
 }
 @media (max-width: 374px) {
@@ -850,6 +880,11 @@ h4 {
   width: 796px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .slider__slide.slide-1 .phones .phone_vertical {
+    margin-right: 70px;
+  }
+}
 .slider__slide.slide-2 {
   left: 100%;
   background-color: #648BF0;
@@ -883,6 +918,11 @@ h4 {
 }
 .slider__slide.slide-2 .phones .phone:nth-child(3) {
   margin-left: 38px;
+}
+@media (max-width: 767px) {
+  .slider__slide.slide-2 .phones .phone:nth-child(1) {
+    margin-right: 20px;
+  }
 }
 
 .phone_btn {
