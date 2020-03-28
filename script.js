@@ -66,6 +66,11 @@ function onScroll(event) {
                     a.classList.add('active');
                 }
             })
+        } else if (document.documentElement.scrollHeight - document.documentElement.clientHeight <= window.pageYOffset) {
+            links.forEach( a => {
+              a.classList.remove('active');
+            });
+            links[links.length - 1].classList.add('active');
         }
     });
 }
