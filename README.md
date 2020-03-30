@@ -7,6 +7,7 @@ ___
 
 Активация экранов телефонов по клику **на кнопку расположенную внизу телефона или с левой стороны для горизонтально расположенного телефона**
 
+по любым вопросам писать в [Telegram](https://t.me/AKrauchuk) или в discord: Alexei Kravchuk#5230
 -----------------------------------------
 # Homework: Singolo. DOM + Responsive
 **[Макет figma Singolo](https://www.figma.com/file/HfBfQdMpn9X9FMPeocJGis/Singolo)**  
