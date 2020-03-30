@@ -11,7 +11,7 @@ ___
 -----------------------------------------
 # Homework: Singolo. DOM + Responsive
 **[Макет figma Singolo](https://www.figma.com/file/HfBfQdMpn9X9FMPeocJGis/Singolo)**  
-
+#### [singolo-cross-check инструкция](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-2/singolo/singolo-cross-check-2-ru.md)
 ## Singolo. DOM. Техническое задание
 
 ### Общее  
